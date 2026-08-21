@@ -1,0 +1,42 @@
+# Symptom to Disease classifier — training configurations
+
+symptom_classifier:
+  model_type: xgboost
+  hyperparams:
+    n_estimators: 200
+    max_depth: 6
+    learning_rate: 0.1
+    subsample: 0.8
+    colsample_bytree: 0.8
+  input_features: 50         # top symptom features
+  output_classes: 100         # disease categories
+  train_test_split: 0.2
+  random_state: 42
+  model_path: ../models/symptom_classifier.joblib
+
+demand_predictor:
+  model_type: xgboost
+  hyperparams:
+    n_estimators: 150
+    max_depth: 5
+    learning_rate: 0.05
+  features:
+    - historical_sales
+    - day_of_week
+    - month
+    - is_holiday
+    - temperature
+    - flu_index
+  model_path: ../models/demand_predictor.joblib
+
+ner_extractor:
+  model_type: spacy
+  base_model: en_core_web_sm
+  custom_entities:
+    - MEDICINE_NAME
+    - DOSAGE
+    - FREQUENCY
+    - DURATION
+    - ROUTE
+  training_data: ../data/prescription_annotations.jsonl
+  model_path: ../models/prescription_ner

@@ -1,0 +1,58 @@
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+*.egg
+.eggs/
+venv/
+.venv/
+env/
+.env
+*.log
+
+# ===== Node.js =====
+node_modules/
+.next/
+out/
+.cache/
+npm-debug.log*
+
+# ===== IDE =====
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ===== OS =====
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ===== Docker =====
+*.pid
+
+# ===== ML =====
+ml/models/*.joblib
+ml/models/*.pkl
+ml/models/*.bin
+ml/data/*.csv
+ml/data/*.jsonl
+
+# ===== Secrets =====
+.env
+.env.local
+.env.production
+
+# ===== Coverage =====
+htmlcov/
+.coverage
+coverage.xml
+*.cover
+
+# ===== Alembic =====
+# Keep migration scripts; ignore auto-generated stamps only if needed

@@ -1,0 +1,3 @@
+# Placeholder for training data files
+# Place symptom_disease.csv here for model training.
+# Format: symptom_1,symptom_2,...,symptom_50,disease_label

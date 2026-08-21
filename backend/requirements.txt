@@ -1,0 +1,52 @@
+# Smart Medicine Platform — Python Dependencies
+# Core
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+pydantic==2.9.2
+pydantic-settings==2.5.2
+python-dotenv==1.0.1
+python-multipart==0.0.12
+
+# Database
+sqlalchemy[asyncio]==2.0.35
+asyncpg==0.29.0
+alembic==1.13.3
+
+# Auth
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+bcrypt==4.2.0
+
+# Redis
+redis[hiredis]==5.1.1
+
+# Elasticsearch
+elasticsearch[async]==8.15.1
+
+# HTTP client
+httpx==0.27.2
+
+# Logging
+structlog==24.4.0
+
+# Task queue
+celery[redis]==5.4.0
+
+# ML & NLP (lightweight stubs for now)
+scikit-learn==1.5.2
+xgboost==2.1.1
+spacy==3.8.2
+
+# OCR
+pytesseract==0.3.13
+Pillow==10.4.0
+
+# OpenAI
+openai==1.51.0
+
+# Payment
+razorpay==1.4.2
+
+# Utilities
+orjson==3.10.7
+python-dateutil==2.9.0
